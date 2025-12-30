@@ -183,7 +183,7 @@ input:checked + .slider:before { transform: translateX(18px); }
                                 <img src="{{ asset($user->images->first()->profile_image) }}" 
                                      style="border-radius: 60%; object-fit: cover; height: 80px; width: 80px;">
                             @else
-                                <img src="{{ asset('uploads/blankImage/blank.jpg') }}" 
+                                <img src="{{ asset('public/uploads/blankImage/blank.jpg') }}" 
                                      style="height: 70px; width: 70px; border-radius: 50%;">
                             @endif
                         </td>
@@ -232,7 +232,7 @@ input:checked + .slider:before { transform: translateX(18px); }
                                 <img src="{{ asset($user->images->first()->profile_image) }}" 
                                      style="border-radius: 60%; object-fit: cover; height: 80px; width: 80px;">
                             @else
-                                <img src="{{ asset('uploads/blankImage/blank.jpg') }}" 
+                                <img src="{{ asset('public/uploads/blankImage/blank.jpg') }}" 
                                      style="height: 70px; width: 70px; border-radius: 50%;">
                             @endif
                         </td>
@@ -276,7 +276,7 @@ input:checked + .slider:before { transform: translateX(18px); }
                 <!--                <img src="{{ asset($user->images->first()->profile_image) }}" -->
                 <!--                     style="border-radius: 60%; object-fit: cover; height: 80px; width: 80px;">-->
                 <!--            @else-->
-                <!--                <img src="{{ asset('uploads/blankImage/blank.jpg') }}" -->
+                <!--                <img src="{{ asset('public/uploads/blankImage/blank.jpg') }}" -->
                 <!--                     style="height: 70px; width: 70px; border-radius: 50%;">-->
                 <!--            @endif-->
                 <!--        </td>-->

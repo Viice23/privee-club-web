@@ -821,7 +821,7 @@
                   @php
                     $profileImg = optional($user->profile)->profile_image 
                       ? asset(optional($user->profile)->profile_image) 
-                      : asset('uploads/blankImage/blank.jpg');
+                      : asset('public/uploads/blankImage/blank.jpg');
                   @endphp
                   <img src="{{ $profileImg }}" alt="Profile" style="height:50px; width:50px; border-radius:50%; object-fit:cover;">
                 </td>

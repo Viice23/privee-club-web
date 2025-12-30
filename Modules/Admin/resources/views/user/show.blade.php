@@ -68,8 +68,8 @@
                 <div class="card-body">
                     <div class="row align-items-center mb-4">
                         <div class="col-md-3 text-center">
-                           <a href="{{ asset(optional($user->profile)->profile_image ?? 'uploads/blankImage/blank.jpg') }}" target="_blank">
-                               <img src="{{ asset(optional($user->profile)->profile_image ?? 'uploads/blankImage/blank.jpg') }}" class="profile-img" alt="Profile Image" style="cursor: pointer;">
+                           <a href="{{ asset(optional($user->profile)->profile_image ?? 'public/uploads/blankImage/blank.jpg') }}" target="_blank">
+                               <img src="{{ asset(optional($user->profile)->profile_image ?? 'public/uploads/blankImage/blank.jpg') }}" class="profile-img" alt="Profile Image" style="cursor: pointer;">
                            </a>
                            <h4>Profile Image</h4>
                         </div>

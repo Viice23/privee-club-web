@@ -13,7 +13,7 @@
         <div class="container-fluid d-flex justify-content-between align-items-center">
           <h3><i class="fas fa-globe"></i> {{ isset($city) && $city->id ? 'Update City' : 'Add City' }}</h3>
           <button class="btn btn-primary">
-            <a href="{{ route('admin.location.management') }}" class="back-btn" style="color: white; text-decoration: none;">← Back</a>
+            <a href="{{ route('admin.location.management') }}" class="back-btn" style="color:black; text-decoration: none;">← Back</a>
           </button>
         </div>
       </div>
