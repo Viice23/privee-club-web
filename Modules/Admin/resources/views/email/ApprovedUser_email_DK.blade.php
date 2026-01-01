@@ -42,7 +42,7 @@ This one is profile approved danish version
 
           class="logo"
 
-          src="{{ url('public/assets/images/Frame.png') }}"
+          src="{{ url('assets/images/Frame.png') }}"
 
           alt="Privée Club Logo"
 

@@ -68,8 +68,8 @@
                 <div class="card-body">
                     <div class="row align-items-center mb-4">
                         <div class="col-md-3 text-center">
-                           <a href="{{ asset(optional($user->profile)->profile_image ?? 'public/uploads/blankImage/blank.jpg') }}" target="_blank">
-                               <img src="{{ asset(optional($user->profile)->profile_image ?? 'public/uploads/blankImage/blank.jpg') }}" class="profile-img" alt="Profile Image" style="cursor: pointer;">
+                           <a href="{{ asset(optional($user->profile)->profile_image ?? 'uploads/blankImage/blank.jpg') }}" target="_blank">
+                               <img src="{{ asset(optional($user->profile)->profile_image ?? 'uploads/blankImage/blank.jpg') }}" class="profile-img" alt="Profile Image" style="cursor: pointer;">
                            </a>
                            <h4>Profile Image</h4>
                         </div>
@@ -94,15 +94,15 @@
                         </div>
                         
                         <div class="col-md-2 text-center">
-                           <a href="{{ asset($user->profile_image ?? 'public/uploads/blankImage/blank.jpg') }}" target="_blank">
-                               <img src="{{ asset($user->profile_image ?? 'public/uploads/blankImage/blank.jpg') }}" class="profile-img" alt="Profile Image" style="cursor: pointer;">
+                           <a href="{{ asset($user->profile_image ?? 'uploads/blankImage/blank.jpg') }}" target="_blank">
+                               <img src="{{ asset($user->profile_image ?? 'uploads/blankImage/blank.jpg') }}" class="profile-img" alt="Profile Image" style="cursor: pointer;">
                            </a>
                            <h4>Selfie</h4>
                         </div>
                         
                         <div class="col-md-3 text-center">
-                           <a href="{{ asset(optional($user->bestImage)->profile_image ?? 'public/uploads/blankImage/blank.jpg') }}" target="_blank">
-                               <img src="{{ asset(optional($user->bestImage)->profile_image ?? 'public/uploads/blankImage/blank.jpg') }}" class="profile-img" alt="Profile Image" style="cursor: pointer;">
+                           <a href="{{ asset(optional($user->bestImage)->profile_image ?? 'uploads/blankImage/blank.jpg') }}" target="_blank">
+                               <img src="{{ asset(optional($user->bestImage)->profile_image ?? 'uploads/blankImage/blank.jpg') }}" class="profile-img" alt="Profile Image" style="cursor: pointer;">
                            </a>
                           <h4>Best Image</h4>
                         </div>

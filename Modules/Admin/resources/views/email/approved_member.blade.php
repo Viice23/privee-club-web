@@ -9,7 +9,7 @@
         
         <!-- Logo -->
         <div style="text-align:center; margin-bottom:20px;">
-            <img src="{{ url('public/assets/images/Frame.png') }}" alt="Privée Club Logo" style="max-width:150px;">
+            <img src="{{ url('assets/images/Frame.png') }}" alt="Privée Club Logo" style="max-width:150px;">
         </div>
 
         <!-- Title -->

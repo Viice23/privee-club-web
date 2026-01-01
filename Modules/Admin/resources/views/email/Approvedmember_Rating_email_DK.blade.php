@@ -37,7 +37,7 @@
                     <tr>
                         <th>
                             <div>
-                                <img src="{{ url('public/assets/images/Frame.png') }}" alt="logo" style="
+                                <img src="{{ url('assets/images/Frame.png') }}" alt="logo" style="
                            width: 200px;
                            margin-bottom: 10px;
                            margin-top: 11px;

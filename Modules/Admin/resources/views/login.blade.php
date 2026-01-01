@@ -27,7 +27,7 @@
                 <div class="card">
                     <div class="card-header text-center">
                         <a href="{{ route('admin.login') }}" style="font-weight: 600; font-size: 26px;" class="h1">
-                            <img src="{{ url('public/assets/images/Frame.png') }}" class="brand-image " alt="Logo"
+                            <img src="{{ url('assets/images/Frame.png') }}" class="brand-image " alt="Logo"
                                 width="60%">
                         </a>
                     </div>
@@ -83,7 +83,7 @@
             <!-- Right Image -->
             <div class="col-md-6 d-none d-md-block">
                 <div class="login-img">
-                    <img src="{{ url('public/assets/images/Rectangle 2617.png') }}" class="img-fluid">
+                    <img src="{{ url('assets/images/Rectangle 2617.png') }}" class="img-fluid">
                 </div>
             </div>
 
@@ -91,9 +91,9 @@
     </div>
 
     <!-- jQuery -->
-    <script src="{{ url('public/assets/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url('assets/plugins/jquery/jquery.min.js') }}"></script>
     <!-- Bootstrap 4 -->
-    <script src="{{ url('public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ url('assets/js/adminlte.min2167.js?v=3.2.0') }}"></script>
 

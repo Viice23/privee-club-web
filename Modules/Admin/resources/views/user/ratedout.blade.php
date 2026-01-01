@@ -157,7 +157,7 @@
                         @php
                             $profileImg = optional($user->profile)->profile_image 
                                 ? asset(optional($user->profile)->profile_image) 
-                                : asset('public/uploads/blankImage/blank.jpg');
+                                : asset('uploads/blankImage/blank.jpg');
                         @endphp
                         
                         <img src="{{ $profileImg }}"

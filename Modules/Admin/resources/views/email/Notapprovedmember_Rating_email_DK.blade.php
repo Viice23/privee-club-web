@@ -26,7 +26,7 @@ style="background-color:#FFFFFF; padding:40px 0;">
  <!-- LOGO --> 
  <img 
  class="logo" 
- src="{{ url('public/assets/images/Frame.png') }}" 
+ src="{{ url('assets/images/Frame.png') }}" 
  alt="Privée Club Logo" 
  style="width:240px; height:auto; margin-bottom:30px;" 
  /> 

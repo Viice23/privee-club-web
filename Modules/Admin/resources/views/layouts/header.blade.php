@@ -26,7 +26,7 @@
     }
 </style>
 <div id="loader">
-    <img src="{{ url('public/assets/images/Frame.png') }}"  alt="AdminLTE Logo" style="width:75 px;" class="brand-image ">
+    <img src="{{ url('assets/images/Frame.png') }}"  alt="AdminLTE Logo" style="width:75 px;" class="brand-image ">
   </div>
 
 

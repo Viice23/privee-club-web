@@ -183,7 +183,7 @@ input:checked + .slider:before { transform: translateX(18px); }
                                 <img src="{{ asset($user->images->first()->profile_image) }}" 
                                      style="border-radius: 60%; object-fit: cover; height: 80px; width: 80px;">
                             @else
-                                <img src="{{ asset('public/uploads/blankImage/blank.jpg') }}" 
+                                <img src="{{ asset('uploads/blankImage/blank.jpg') }}" 
                                      style="height: 70px; width: 70px; border-radius: 50%;">
                             @endif
                         </td>
@@ -232,7 +232,7 @@ input:checked + .slider:before { transform: translateX(18px); }
                                 <img src="{{ asset($user->images->first()->profile_image) }}" 
                                      style="border-radius: 60%; object-fit: cover; height: 80px; width: 80px;">
                             @else
-                                <img src="{{ asset('public/uploads/blankImage/blank.jpg') }}" 
+                                <img src="{{ asset('uploads/blankImage/blank.jpg') }}" 
                                      style="height: 70px; width: 70px; border-radius: 50%;">
                             @endif
                         </td>
@@ -253,50 +253,6 @@ input:checked + .slider:before { transform: translateX(18px); }
                     </tbody>
                   </table>
                 </div>
-
-                <!-- POPULAR USERS -->
-                <!--<div class="tab-pane fade" id="popular" role="tabpanel">-->
-                <!--  <table class="table table-striped" style="width:100%">-->
-                <!--    <thead>-->
-                <!--      <tr>-->
-                <!--        <th>S.No</th>-->
-                <!--        <th>Profile Picture</th>-->
-                <!--        <th>Name</th>-->
-                <!--        <th>Email</th>-->
-                <!--        <th>Mobile Number</th>-->
-                <!--        <th>Action</th>-->
-                <!--      </tr>-->
-                <!--    </thead>-->
-                <!--    <tbody>-->
-                <!--      @foreach($popularUsers as $index => $user)-->
-                <!--      <tr>-->
-                <!--        <td>{{ $index + 1 }}</td>-->
-                <!--        <td>-->
-                <!--            @if ($user->images->isNotEmpty() && $user->images->first()->profile_image)-->
-                <!--                <img src="{{ asset($user->images->first()->profile_image) }}" -->
-                <!--                     style="border-radius: 60%; object-fit: cover; height: 80px; width: 80px;">-->
-                <!--            @else-->
-                <!--                <img src="{{ asset('public/uploads/blankImage/blank.jpg') }}" -->
-                <!--                     style="height: 70px; width: 70px; border-radius: 50%;">-->
-                <!--            @endif-->
-                <!--        </td>-->
-                <!--        <td>{{ $user->first_name }}</td>-->
-                <!--        <td>{{ $user->email }}</td>-->
-                <!--        <td>{{ $user->mobile_no }}</td>-->
-                <!--        <td class="text-center">-->
-                <!--          <a href="{{ route('admin.viewuser', $user->id) }}" style="color: green; margin-right: 10px;">-->
-                <!--            <i class="fa fa-eye"></i>-->
-                <!--          </a>-->
-                <!--          <a href="javascript:void(0)" class="delete-btn" data-id="{{ $user->id }}" style="color: red;">-->
-                <!--            <i class="fa fa-trash"></i>-->
-                <!--          </a>-->
-                <!--        </td>-->
-                <!--      </tr>-->
-                <!--      @endforeach-->
-                <!--    </tbody>-->
-                <!--  </table>-->
-                <!--</div>-->
-
               </div> <!-- tab-content -->
 
             </div> <!-- card-body -->
@@ -307,9 +263,7 @@ input:checked + .slider:before { transform: translateX(18px); }
   </section>
 </div>
 
-<!-- JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 <script>
 $(document).on('click', '.delete-btn', function () {

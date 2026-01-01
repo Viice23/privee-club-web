@@ -98,7 +98,7 @@
                             {{ isset($member) && $member->id ? 'Update Ready Member' : 'Add Ready Member' }}</h3>
                         <button class="btn btn-primary">
                             <a href="{{ route('admin.ready.members') }}" class="back-btn"
-                                style="color: white; text-decoration: none;">← Back</a>
+                                style="color: black; text-decoration: none;">← Back</a>
                         </button>
                     </div>
                 </div>
