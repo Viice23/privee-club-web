@@ -28,101 +28,6 @@
         .timer.expired {
             color: #b70000;
         }
-
-
-        /* ðŸŒˆ Header Tabs */
-        .page-header {
-            background: linear-gradient(90deg, #f5f2ff, #ebe5ff);
-            padding: 18px 25px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 3px 12px rgba(95, 66, 170, 0.15);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .page-header h3 {
-            color: #5f42aa;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .page-header h3 i {
-            color: #7b5cf0;
-            font-size: 22px;
-        }
-
-        /* ðŸ“‹ Table Styling */
-        .table th {
-            background: #f3f0ff;
-            color: #4b3b93;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 14px;
-            border-top: none;
-        }
-
-        .table td {
-            vertical-align: middle;
-            font-size: 15px;
-        }
-
-        .table img {
-            border-radius: 50%;
-            height: 60px;
-            width: 60px;
-            object-fit: cover;
-            border: 2px solid #e1dbff;
-        }
-
-        /* ðŸ§­ Action Icons */
-        .action-icons i {
-            font-size: 18px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .action-icons i.fa-eye {
-            color: #28a745;
-        }
-
-        .action-icons i.fa-trash {
-            color: #dc3545;
-        }
-
-        .action-icons i:hover {
-            transform: scale(1.2);
-        }
-
-        /* ðŸŒŸ Card Shadow */
-        .card {
-            border-radius: 15px;
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
-            border: none;
-        }
-
-        /* ðŸ§© Tabs */
-        .nav-tabs {
-            border-bottom: 2px solid #e5e0ff;
-        }
-
-        .nav-tabs .nav-link {
-            color: #5f42aa;
-            border: none;
-            font-weight: 500;
-            padding: 10px 25px;
-        }
-
-        .nav-tabs .nav-link.active {
-            background: #7b5cf0;
-            color: #fff !important;
-            border-radius: 8px 8px 0 0;
-        }
     </style>
 @endsection
 
@@ -196,11 +101,17 @@
                                                 <td>{{ $user->created_at ? $user->created_at->format('d M Y') : 'â€”' }}
                                                 </td>
 
-                                                <td class="text-center action-icons">
-                                                    <a href="{{ route('admin.viewuser', $user->id) }}"><i
-                                                            class="fa fa-eye"></i></a>
-                                                    <a href="javascript:void(0)" class="delete-btn"
-                                                        data-id="{{ $user->id }}"><i class="fa fa-trash"></i></a>
+
+                                                <td class="text-center action-icons" style="min-width: 70px;">
+                                                    <a style="float: left;margin-right: 5px;"
+                                                        class="btn btn-warning btn-sm showBtn show-btn"
+                                                        href="{{ route('admin.viewuser', [$user->id, 'activeprofile']) }}"><i
+                                                            class="ph ph-eye"></i></a>
+
+
+                                                    <button href="javascript:void(0)" style="float: left;margin-right: 1px;"
+                                                        class="deleteBtn btn btn-sm btn-danger delete-btn "
+                                                        data-id="{{ $user->id }}"><i class="ph ph-trash"></i></button>
                                                 </td>
                                             </tr>
                                         @empty

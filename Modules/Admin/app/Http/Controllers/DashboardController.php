@@ -307,14 +307,15 @@ class DashboardController extends Controller
         return view('admin::user.nonActiveMembers', compact('Users'));
     }
 
-    public function viewUser($id)
+    public function viewUser($id, $type = null)
     {
         $user = User::with('profile', 'bestImage')->where('id', $id)->first();
         $rategiven = UserRate::with('ratedTo')->where('sender_id', $id)->get();
         $raterecived = UserRate::with('ratedBy')->where('reciever_id', $id)->get();
 
-        return view('admin::user.show', compact('user', 'rategiven', 'raterecived'));
+        return view('admin::user.show', compact('user', 'rategiven', 'raterecived', 'type'));
     }
+
 
     public function Catgeory()
     {

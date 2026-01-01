@@ -102,7 +102,7 @@
 
                                                 <td class="text-center action-icons" style="min-width: 70px;">
                                                     <a class="btn btn-warning btn-sm showBtn show-btn"
-                                                        href="{{ route('admin.viewuser', $user->id) }}"><i
+                                                        href="{{ route('admin.viewuser', [$user->id, 'rejectedUsers']) }}"><i
                                                             class="ph ph-eye"></i></a>
                                                     <button href="javascript:void(0)"
                                                         class="deleteBtn btn btn-sm btn-danger delete-btn "
@@ -125,16 +125,8 @@
             </div>
         </section>
     </div>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
-    <!-- Optional Bootstrap 5 integration -->
-    <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
-    <!-- JS: SweetAlert Delete -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         $(document).on('click', '.delete-btn', function() {
             let userId = $(this).data('id');

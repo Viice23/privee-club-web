@@ -201,7 +201,7 @@
 
                                                 <td class="text-center action-icons" style="min-width: 70px;">
                                                     <a class="btn btn-warning btn-sm showBtn show-btn"
-                                                        href="{{ route('admin.viewuser', $user->id) }}"><i
+                                                        href="{{ route('admin.viewuser', [$user->id, 'acceptUser']) }}"><i
                                                             class="ph ph-eye"></i></a>
                                                     <button href="javascript:void(0)"
                                                         class="deleteBtn btn btn-sm btn-danger delete-btn "

@@ -40,6 +40,7 @@
                         'admin.ratedOutApplicants',
                         'admin.activeprofile',
                         'admin.nonActiveMembers',
+                        'admin.viewuser',
                     ])
                         ? 'menu-is-opening menu-open'
                         : '' }}">
@@ -53,6 +54,7 @@
                             'admin.ratedOutApplicants',
                             'admin.activeprofile',
                             'admin.nonActiveMembers',
+                            'admin.viewuser',
                         ])
                             ? 'active'
                             : '' }}">
@@ -68,7 +70,7 @@
                             <a href="{{ route('admin.newuser') }}"
                                 class="nav-link {{ request()->routeIs('admin.newuser') ? 'active' : '' }}">
                                 <i
-                                    class="{{ request()->routeIs('admin.newuser') ? 'fas' : 'far' }} far fa-circle nav-icon text-primary"></i>
+                                    class="{{ request()->routeIs('admin.newuser') || request()->route('type') == 'newuser' ? 'fas' : 'far' }} far fa-circle nav-icon text-primary"></i>
                                 <p>New Users</p>
                             </a>
                         </li>
@@ -77,7 +79,7 @@
                             <a href="{{ route('admin.rejectedUsers') }}"
                                 class="nav-link {{ request()->routeIs('admin.rejectedUsers') ? 'active' : '' }}">
                                 <i
-                                    class="{{ request()->routeIs('admin.rejectedUsers') ? 'fas' : 'far' }} fa-circle nav-icon text-danger"></i>
+                                    class="{{ request()->routeIs('admin.rejectedUsers') || request()->route('type') == 'rejectedUsers' ? 'fas' : 'far' }} fa-circle nav-icon text-danger"></i>
                                 <p>Rejected Users</p>
                             </a>
                         </li>
@@ -86,7 +88,7 @@
                             <a href="{{ route('admin.acceptUser') }}"
                                 class="nav-link {{ request()->routeIs('admin.acceptUser') ? 'active' : '' }}">
                                 <i
-                                    class="{{ request()->routeIs('admin.acceptUser') ? 'fas' : 'far' }} fa-circle nav-icon text-warning"></i>
+                                    class="{{ request()->routeIs('admin.acceptUser') || request()->route('type') == 'acceptUser' ? 'fas' : 'far' }} fa-circle nav-icon text-warning"></i>
                                 <p>New Applicants</p>
                             </a>
                         </li>
@@ -95,7 +97,7 @@
                             <a href="{{ route('admin.ratedOutApplicants') }}"
                                 class="nav-link {{ request()->routeIs('admin.ratedOutApplicants') ? 'active' : '' }}">
                                 <i
-                                    class="{{ request()->routeIs('admin.ratedOutApplicants') ? 'fas' : 'far' }} fa-circle nav-icon text-info"></i>
+                                    class="{{ request()->routeIs('admin.ratedOutApplicants') || request()->route('type') == 'ratedOutApplicants' ? 'fas' : 'far' }} fa-circle nav-icon text-info"></i>
                                 <p>Rated Out Applicants</p>
                             </a>
                         </li>
@@ -104,7 +106,7 @@
                             <a href="{{ route('admin.activeprofile') }}"
                                 class="nav-link {{ request()->routeIs('admin.activeprofile') ? 'active' : '' }}">
                                 <i
-                                    class="{{ request()->routeIs('admin.activeprofile') ? 'fas' : 'far' }} fa-circle nav-icon text-success"></i>
+                                    class="{{ request()->routeIs('admin.activeprofile') || request()->route('type') == 'activeprofile' ? 'fas' : 'far' }} fa-circle nav-icon text-success"></i>
                                 <p>Active Members</p>
                             </a>
                         </li>
@@ -113,7 +115,7 @@
                             <a href="{{ route('admin.nonActiveMembers') }}"
                                 class="nav-link {{ request()->routeIs('admin.nonActiveMembers') ? 'active' : '' }}">
                                 <i
-                                    class="{{ request()->routeIs('admin.nonActiveMembers') ? 'fas' : 'far' }} fa-circle nav-icon text-secondary"></i>
+                                    class="{{ request()->routeIs('admin.nonActiveMembers') || request()->route('type') == 'nonActiveMembers' ? 'fas' : 'far' }} fa-circle nav-icon text-secondary"></i>
                                 <p>Non Active Members</p>
                             </a>
                         </li>

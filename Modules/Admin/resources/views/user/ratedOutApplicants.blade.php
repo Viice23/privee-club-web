@@ -1,6 +1,6 @@
 @extends('admin::layouts.master')
 
-@section('title', 'Rated Out Applicants')
+@section('title', '🆕 Rated Out Users')
 
 @section('css')
     <style>
@@ -28,114 +28,6 @@
         .timer.expired {
             color: #b70000;
         }
-
-
-        /* Header Tabs */
-        .page-header {
-            background: linear-gradient(90deg, #f5f2ff, #ebe5ff);
-            padding: 18px 25px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 3px 12px rgba(95, 66, 170, 0.15);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .page-header h3 {
-            color: #5f42aa;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .page-header h3 i {
-            color: #7b5cf0;
-            font-size: 22px;
-        }
-
-        /* Table Styling */
-        .table th {
-            background: #f3f0ff;
-            color: #4b3b93;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 14px;
-            border-top: none;
-        }
-
-        .table td {
-            vertical-align: middle;
-            font-size: 15px;
-        }
-
-        .table img {
-            border-radius: 50%;
-            height: 60px;
-            width: 60px;
-            object-fit: cover;
-            border: 2px solid #e1dbff;
-        }
-
-        /* Action Icons */
-        .action-icons i {
-            font-size: 18px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .action-icons i.fa-eye {
-            color: #28a745;
-        }
-
-        .action-icons i.fa-trash {
-            color: #dc3545;
-        }
-
-        .action-icons i:hover {
-            transform: scale(1.2);
-        }
-
-        /* Card Shadow */
-        .card {
-            border-radius: 15px;
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
-            border: none;
-        }
-
-        /* Tabs */
-        .nav-tabs {
-            border-bottom: 2px solid #e5e0ff;
-        }
-
-        .nav-tabs .nav-link {
-            color: #5f42aa;
-            border: none;
-            font-weight: 500;
-            padding: 10px 25px;
-        }
-
-        .nav-tabs .nav-link.active {
-            background: #7b5cf0;
-            color: #fff !important;
-            border-radius: 8px 8px 0 0;
-        }
-
-        .rating-status {
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 12px;
-            text-transform: uppercase;
-        }
-
-        .rating-status.out {
-            background-color: #fee;
-            color: #c33;
-        }
     </style>
 @endsection
 
@@ -144,7 +36,7 @@
         <div class="content-header">
             <div class="container-fluid">
                 <div class="page-header">
-                    <h3><i class="las la-user-plus"></i>Rated Out Applicants</h3>
+                    <h3><i class="las la-user-plus"></i> Rated Out Applicants</h3>
                 </div>
             </div>
         </div>
@@ -155,10 +47,10 @@
 
                 <div class="tab-content" id="genderTabsContent">
 
-                    <!-- Male Users -->
+                    <!-- 👨 Male Users -->
                     <div class="tab-pane fade show active" id="male" role="tabpanel" aria-labelledby="male-tab">
                         <div class="card mt-3">
-                            <div class="card-body table-responsive-changed">
+                            <div class="card-body table-responsive">
 
                                 <div class="form-group mb-3">
                                     <label for="genderFilter" class="font-weight-bold">Filter by Gender:</label>
@@ -169,7 +61,7 @@
                                     </select>
                                 </div>
 
-                                <table class="table table-striped commontable">
+                                <table class="table table-striped align-middle commontable">
 
 
                                     <thead>
@@ -182,7 +74,8 @@
                                             <th>Email</th>
                                             <th>Mobile</th>
                                             <th>Registered On</th>
-                                            <th>Rating Status</th>
+
+
                                             <th class="text-center">Action</th>
                                         </tr>
                                     </thead>
@@ -200,32 +93,29 @@
 
                                                     <img src="{{ $profileImg }}" alt="Profile Image"
                                                         style="height:80px; width:80px; border-radius:50%; object-fit:cover; border:2.5px solid #e1dbff; margin:0 auto;">
-
                                                 </td>
                                                 <td>{{ $user->profile_name ?? '—' }}</td>
                                                 <td>{{ $user->gender ?? '—' }}</td>
                                                 <td>{{ $user->email ?? '—' }}</td>
                                                 <td>{{ $user->mobile_no ?? '—' }}</td>
                                                 <td>{{ $user->created_at ? $user->created_at->format('d M Y') : '—' }}</td>
-                                                <td>
-                                                    <span
-                                                        class="rating-status out">{{ $user->profie_rating_status ?? 'OUT' }}</span>
-                                                </td>
-
 
                                                 <td class="text-center action-icons" style="min-width: 70px;">
-                                                    <a class="btn btn-warning btn-sm showBtn show-btn"
-                                                        href="{{ route('admin.viewuser', $user->id) }}"><i
+                                                    <a style="float: left;margin-right: 5px;"
+                                                        class="btn btn-warning btn-sm showBtn show-btn"
+                                                        href="{{ route('admin.viewuser', [$user->id, 'ratedOutApplicants']) }}"><i
                                                             class="ph ph-eye"></i></a>
-                                                    <button href="javascript:void(0)"
+
+
+                                                    <button href="javascript:void(0)" style="float: left;margin-right: 1px;"
                                                         class="deleteBtn btn btn-sm btn-danger delete-btn "
                                                         data-id="{{ $user->id }}"><i class="ph ph-trash"></i></button>
                                                 </td>
                                             </tr>
                                         @empty
                                             <tr>
-                                                <td colspan="10" class="text-center text-muted py-4">No rated out
-                                                    applicants found.</td>
+                                                <td colspan="8" class="text-center text-muted py-4">No new male users.
+                                                </td>
                                             </tr>
                                         @endforelse
                                     </tbody>
@@ -238,16 +128,8 @@
             </div>
         </section>
     </div>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
-    <!-- Optional Bootstrap 5 integration -->
-    <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
-    <!-- JS: SweetAlert Delete -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         $(document).on('click', '.delete-btn', function() {
             let userId = $(this).data('id');
@@ -284,6 +166,48 @@
         });
     </script>
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            @foreach ($Users as $user)
+                (function() {
+                    let expiryTime = new Date("{{ $user->expiryTime }}").getTime();
+                    let timerElement = document.getElementById("timer-{{ $user->id }}");
+
+                    // 🚨 IMPORTANT GUARD
+                    if (!timerElement || isNaN(expiryTime)) {
+                        return;
+                    }
+
+                    let timer = setInterval(function() {
+                        let now = new Date().getTime();
+                        let distance = expiryTime - now;
+
+                        if (distance < 0) {
+                            clearInterval(timer);
+                            timerElement.innerHTML = "Expired";
+                            timerElement.className = "timer expired";
+                        } else {
+                            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 *
+                                60));
+                            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            if (hours >= 18) {
+                                timerElement.className = "timer green";
+                            } else if (hours >= 6) {
+                                timerElement.className = "timer orange";
+                            } else {
+                                timerElement.className = "timer red";
+                            }
+
+                            timerElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+                        }
+                    }, 1000);
+                })();
+            @endforeach
+        });
+    </script>
+
+    <script>
         $(document).ready(function() {
             let table = $('.commontable').DataTable();
 
@@ -296,6 +220,7 @@
                 }
             });
         });
+    </script>
     </script>
 
 @endsection

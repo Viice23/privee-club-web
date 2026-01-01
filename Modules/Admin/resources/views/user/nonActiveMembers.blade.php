@@ -111,8 +111,9 @@
                                                 </td>
 
                                                 <td class="text-center action-icons">
-                                                    <a href="{{ route('admin.viewuser', $user->id) }}"><i
-                                                            class="fa fa-eye"></i></a>
+                                                    <a class="btn btn-warning btn-sm showBtn show-btn"
+                                                        href="{{ route('admin.viewuser', [$user->id, 'nonActiveMembers']) }}"><i
+                                                            class="ph ph-eye"></i></a>
                                                 </td>
                                             </tr>
                                         @empty

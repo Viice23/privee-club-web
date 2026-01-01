@@ -101,11 +101,16 @@
                                                 <td>{{ $user->created_at ? $user->created_at->format('d M Y') : 'â€”' }}
                                                 </td>
 
-                                                <td class="text-center action-icons">
-                                                    <a href="{{ route('admin.viewuser', $user->id) }}"><i
-                                                            class="fa fa-eye"></i></a>
-                                                    <a href="javascript:void(0)" class="delete-btn"
-                                                        data-id="{{ $user->id }}"><i class="fa fa-trash"></i></a>
+                                                <td class="text-center action-icons" style="min-width: 70px;">
+                                                    <a style="float: left;margin-right: 5px;"
+                                                        class="btn btn-warning btn-sm showBtn show-btn"
+                                                        href="{{ route('admin.viewuser', [$user->id, 'deniedUser']) }}"><i
+                                                            class="ph ph-eye"></i></a>
+
+
+                                                    <button href="javascript:void(0)" style="float: left;margin-right: 1px;"
+                                                        class="deleteBtn btn btn-sm btn-danger delete-btn "
+                                                        data-id="{{ $user->id }}"><i class="ph ph-trash"></i></button>
                                                 </td>
                                             </tr>
                                         @empty
