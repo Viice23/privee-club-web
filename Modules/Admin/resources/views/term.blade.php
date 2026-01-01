@@ -43,7 +43,7 @@
                     </div>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary ms-auto" style="background-color:#198754f5; border: none;">Submit</button>
+                <button type="submit" class="btn btn-primary ms-auto" style="color:#000; border: none;">Submit</button>
               </form>
             </div>
           </div>

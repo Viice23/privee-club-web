@@ -44,7 +44,7 @@
                                                         data-id="{{ $val->id }}" data-status="1">
                                                         <i class="ph ph-check"></i>
                                                     </button>
-                                                    <a href="{{ route('admin.viewuser', $val->user_id) }}"
+                                                    <a href="{{ route('admin.viewuser', [$val->user_id, 'profileUpdateRequest']) }}"
                                                         class="btn btn-warning btn-sm showBtn show-btn"><i
                                                             class="ph ph-eye"></i></a>
 

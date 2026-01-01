@@ -377,6 +377,7 @@ img.animation__shake {
 .show-btn:hover {
     background: #0dcaf0 !important;
     color: #fff !important;
+    border: 0 !important;
 }
 
 .edit-btn:hover {
@@ -387,6 +388,7 @@ img.animation__shake {
 .edit-btn {
     background: #40863147 !important;
     color: #000 !important;
+    border: 0 !important;
 }
 
 .delete-btn {
@@ -406,4 +408,18 @@ img.animation__shake {
     border-color: #28a745;
     border: none !important;
     box-shadow: none;
+}
+
+.ph-toggle-left {
+    font-size: 25px;
+    color: #bbbbbb;
+}
+
+.ph-toggle-right {
+    font-size: 25px;
+    color: green;
+}
+
+.toggle_button {
+    margin-top: 5px;
 }

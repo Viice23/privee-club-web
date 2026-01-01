@@ -248,23 +248,26 @@
                                                     <span class="badge badge-warning">No</span>
                                                 @endif
                                             </td>
-                                            <td class="text-center action-icons">
-                                                <a href="{{ route('admin.view.ready.member', base64_encode($member->id)) }}"
+                                            <td class="text-center action-icons" style="min-width: 130px;">
+
+                                                <a class="btn btn-warning btn-sm showBtn show-btn"
+                                                    href="{{ route('admin.view.ready.member', base64_encode($member->id)) }}"
                                                     title="View">
-                                                    <i class="fa fa-eye"></i>
+                                                    <i class="ph ph-eye"></i>
                                                 </a>
                                                 <a href="{{ route('admin.edit.ready.member', base64_encode($member->id)) }}"
-                                                    title="Edit">
-                                                    <i class="fa fa-edit"></i>
+                                                    class="btn btn-warning btn-sm showBtn edit-btn" title="Edit">
+                                                    <i class="ph ph-pencil-simple"></i>
                                                 </a>
                                                 <a href="javascript:void(0)" class="toggle-status"
                                                     data-id="{{ base64_encode($member->id) }}" title="Toggle Status">
                                                     <i
-                                                        class="fa {{ $member->is_active == 1 ? 'fa-toggle-on' : 'fa-toggle-off' }}"></i>
+                                                        class="fa {{ $member->is_active == 1 ? 'ph ph-toggle-right' : 'ph ph-toggle-left' }}"></i>
                                                 </a>
-                                                <a href="javascript:void(0)" class="delete-member"
+                                                <a href="javascript:void(0)"
+                                                    class="deleteBtn btn btn-sm btn-danger delete-btn delete-member"
                                                     data-id="{{ base64_encode($member->id) }}" title="Delete">
-                                                    <i class="fa fa-trash"></i>
+                                                    <i class="ph ph-trash"></i>
                                                 </a>
                                             </td>
                                         </tr>
